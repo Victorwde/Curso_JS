@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaport</title>
+</head>
+<body>
+    <h1>Verificando a sua nacionalidade</h1>
+    Digite onde você nasceu: <input type="text" name="txt" id="txt"> .
+    <input type="button" value="text" onclick="verificar()">
+    <div id="result">
+
+    </div>
+    <script>
+        function verificar() {
+            var txt1 = document.querySelector('input#txt')
+            var result = document.querySelector('div#result')
+            var verif = txt1.value.toUpperCase()
+            result.innerHTML = `<p>Seu País de origem é <strong>${verif}</strong>.</p>`
+            if (verif == 'BRASIL') {
+                result.innerHTML = `<p><strong>Você é Brasileiro!</strong></p>`
+            } else {
+                result.innerHTML = `<p><strong>Você é Estrageiro!</strong></p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
